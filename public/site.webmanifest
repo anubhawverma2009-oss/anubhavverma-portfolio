@@ -1,0 +1,13 @@
+{
+  "name": "Anubhav Verma — Portfolio",
+  "short_name": "Anubhav Verma",
+  "description": "Personal portfolio of Anubhav Verma — Student Developer & Technology Enthusiast.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#05060a",
+  "theme_color": "#05060a",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/icons/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

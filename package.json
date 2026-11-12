@@ -1,0 +1,23 @@
+{
+  "name": "anubhavverma-portfolio",
+  "description": "Personal 3D portfolio of Anubhav Verma — Student, Technology Enthusiast, Aspiring Developer.",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "homepage": "https://anubhavverma.xyz",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^9.8.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.3.0",
+    "vite": "^8.3.8"
+  }
+}
