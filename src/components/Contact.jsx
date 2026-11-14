@@ -35,10 +35,10 @@ export default function Contact() {
 
             <div className="contact-actions">
               {site.email ? (
-                <a className="btn btn--primary" href={contactMailto}>
-                  <MailIcon />
-                  Say Hello
-                </a>
+                <a className="btn btn--primary" href={contactMailto} target="_blank" rel="noopener noreferrer">
+                <MailIcon />
+               Say Hello
+              </a>
               ) : (
                 <a className="btn btn--primary" href={socials[0].url} target="_blank" rel="noopener noreferrer">
                   Reach out on GitHub
