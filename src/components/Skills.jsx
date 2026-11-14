@@ -12,8 +12,7 @@ export default function Skills() {
           index={3}
           kicker="Skills"
           title={<>My current <span className="grad-text">toolbox</span></>}
-          lead="Honest skills only — everything listed is backed by real projects and repositories. Dashed chips are skills I'm planning to learn next."
-        />
+          lead="The skills I build with, the tools I create with, and the technologies I explore — growing with every project."        />
 
         <div className="skills-grid">
           {skills.map((group, i) => {
