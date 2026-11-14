@@ -380,6 +380,7 @@ export const skills = [
    type: 'win' | 'participation' | 'build'   (controls the badge & styling)
    date: null → hidden until you add it (never invent dates).
    ========================================================================= */
+
 export const achievements = [
   {
     type: 'achievement',
@@ -388,25 +389,33 @@ export const achievements = [
     date: 'JULY 2026',
     description:
       'Secured 7th position in the U-19 AI Olympics organized by TENSOR SCHOOL OF CS & AI.',
-     badge: '7th Position',
+    badge: '7th Position',
   },
   {
-    type: 'participation',
-    title: 'CyberAware Cyber Security Awareness Challenge',
-    org: 'RANKUP',
+    type: 'achievement',
+    title: 'Smart India Hackathon — 2nd Position',
+    org: 'Luucnow Public College of Professional Studies',
+    date: 'AUGUST 2026',
+    description:
+      'Secured 2nd position at the college level in Smart India Hackathon as part of a collaborative team.',
+    team: [
+      'Anubhav Verma',
+      'Aadarsh Yadav',
+      'Ananya Srivastava',
+      'Ankita Chaurasia',
+      'Aviral Omar',
+      'Devansh Singh',
+    ],
+    badge: '2nd Position · College Level',
+  },
+  {
+    type: 'learning',
+    title: 'Continuous Learning & Skill Development',
+    org: 'Workshops · Competitions · Learning Experiences',
     date: null,
     description:
-      'Received a Certificate of Participation in the cyber-security awareness challenge organized by RANKUP.',
-    badge: 'Certificate of Participation',
-  },
-  {
-    type: 'build',
-    title: 'CivicPulse — Vibe2Ship 2026 Hackathon entry',
-    org: 'Vibe2Ship 2026 · Community Hero track',
-    date: '2026',
-    description:
-      'Designed and shipped CivicPulse, a civic-issue reporting platform, as a hackathon entry for the hyperlocal problem-solving track.',
-    badge: 'Hackathon Build',
+      'Actively exploring new technologies, participating in workshops and learning opportunities, and continuously developing practical skills through hands-on experiences.',
+    badge: 'Always Learning',
   },
 
   /* ── TEMPLATES — uncomment & fill as they happen ────────────────────────
