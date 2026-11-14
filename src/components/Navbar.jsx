@@ -29,7 +29,13 @@ export default function Navbar() {
     }
   }, [open])
 
-  const go = () => setOpen(false)
+  /* Close the menu AND release the <html> scroll lock synchronously, so the
+     browser's default anchor scroll (same click, before React re-renders)
+     happens on an unlocked viewport. */
+  const go = () => {
+    setOpen(false)
+    document.documentElement.style.overflow = ''
+  }
 
   return (
     <>

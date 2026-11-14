@@ -52,6 +52,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Offset all hash navigation so targets land below the fixed navbar */
+  scroll-padding-top: calc(var(--nav-h) + 12px);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -61,7 +63,9 @@ body {
   color: var(--text-1);
   line-height: 1.65;
   font-size: 16px;
-  overflow-x: hidden;
+  /* clip (not hidden): clips stray horizontal overflow WITHOUT turning body
+     into a scroll container — `hidden` hijacks hash-anchor scrolling */
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -96,9 +100,8 @@ button {
   border-radius: 6px;
 }
 
-section {
-  scroll-margin-top: calc(var(--nav-h) + 12px);
-}
+/* Anchor offset is handled once, globally, by `scroll-padding-top` on <html>
+   (see top of file) — per-section scroll-margin would stack with it. */
 
 .container {
   width: min(100% - (var(--gutter) * 2), var(--container));
