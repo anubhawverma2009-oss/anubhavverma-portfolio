@@ -49,7 +49,7 @@ export const site = {
 
   /* ── CONTACT EMAIL ───────────────────────────────────────────────────────
      Replace with your real address. Shown only when set.                  */
-  email: 'teamexperienced.in@gmail.com',
+  email: 'mr.experienceanubhav@gmail.com',
   /* ── RESUME ──────────────────────────────────────────────────────────────
      Put your PDF at  public/resume/Anubhav_Verma_Resume.pdf  (a clearly
      marked placeholder PDF ships there now, so the button never breaks). */
