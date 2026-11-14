@@ -86,8 +86,7 @@ Looking forward to connecting!
 Best regards,
 [Your Name]`
 
-  return `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-})()
+return `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(site.email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`})()
 
 /* =========================================================================
    2 · SOCIAL PROFILES  (verified links — edit only if they change)
