@@ -42,7 +42,7 @@ export const site = {
      Drop a picture at  public/images/profile.jpg  (square, ≥ 500×500 works
      best) and set the path below. While it is null, an elegant monogram
      avatar is shown instead.                                            */
-  profileImage: null, // e.g. '/images/profile.jpg'
+  profileImage:'/images/profile.png',
 
   location: 'Lucknow, Uttar Pradesh, India',
   domain: 'anubhavverma.xyz',
