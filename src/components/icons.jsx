@@ -47,8 +47,13 @@ export const UnstopIcon = (p) => (
 )
 
 export const socialIcon = (id) =>
-  ({ github: GithubIcon, linkedin: LinkedinIcon, instagram: InstagramIcon, unstop: UnstopIcon }[id] ||
-    LinkIcon)
+  ({
+    github: GithubIcon,
+    linkedin: LinkedinIcon,
+    instagram: InstagramIcon,
+    unstop: UnstopIcon,
+    email: MailIcon,
+  }[id] || LinkIcon)
 
 /* General UI */
 export const LinkIcon = (p) => (
