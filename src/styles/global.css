@@ -52,8 +52,10 @@
 
 html {
   scroll-behavior: smooth;
-  /* Offset all hash navigation so targets land below the fixed navbar */
-  scroll-padding-top: calc(var(--nav-h) + 12px);
+  /* Anchor offset: the fixed navbar. Sections additionally cancel their own
+     top padding via negative scroll-margin (next rule), so the section
+     HEADING — not the padded section box — lands just below the navbar. */
+  scroll-padding-top: var(--nav-h);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -100,8 +102,19 @@ button {
   border-radius: 6px;
 }
 
-/* Anchor offset is handled once, globally, by `scroll-padding-top` on <html>
-   (see top of file) — per-section scroll-margin would stack with it. */
+/* Anchor landing correction — root cause: hash navigation aligns the
+   section BOX top, but .section carries large rhythm padding
+   (clamp(84px, 11vw, 148px)), which appeared as dead space under the
+   navbar. A negative scroll-margin cancels that padding (same clamp, so
+   it tracks every viewport width) and leaves a 16px visible gap:
+   heading lands at nav-h + 16px. Hero cancels the navbar offset entirely
+   so Home always lands at the very top. */
+.section {
+  scroll-margin-top: calc(16px - clamp(84px, 11vw, 148px));
+}
+.hero {
+  scroll-margin-top: calc(-1 * var(--nav-h));
+}
 
 .container {
   width: min(100% - (var(--gutter) * 2), var(--container));
@@ -1392,6 +1405,11 @@ button {
   border-radius: 12px;
   border: 1px solid rgba(77, 141, 255, 0.3);
   background: rgba(77, 141, 255, 0.07);
+  /* long mono addresses must be breakable on narrow screens, otherwise the
+     pill's min-content width blows out the mobile grid → horizontal scroll */
+  overflow-wrap: anywhere;
+  max-width: 100%;
+  min-width: 0;
 }
 .contact-email .email-line svg { width: 16px; height: 16px; color: var(--blue); }
 .contact-actions {
