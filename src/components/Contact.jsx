@@ -1,4 +1,4 @@
-import { site, socials } from '../data/portfolio'
+import { site, socials, contactMailto } from '../data/portfolio'
 import { socialIcon, MailIcon, ArrowUpRightIcon, SparkIcon } from './icons'
 import { Reveal, SectionHead, Slot } from './ui'
 
@@ -35,7 +35,7 @@ export default function Contact() {
 
             <div className="contact-actions">
               {site.email ? (
-                <a className="btn btn--primary" href={`mailto:${site.email}`}>
+                <a className="btn btn--primary" href={contactMailto}>
                   <MailIcon />
                   Say Hello
                 </a>

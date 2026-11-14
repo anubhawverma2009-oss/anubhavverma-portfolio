@@ -64,6 +64,32 @@ export const site = {
 }
 
 /* =========================================================================
+   "SAY HELLO" COMPOSE LINK  (used by the Contact section button)
+   -------------------------------------------------------------------------
+   Opens the visitor's email app with the recipient, subject and a short
+   pre-filled message. Edit the text below — it stays properly URL-encoded.
+   ========================================================================= */
+export const contactMailto = (() => {
+  if (!site.email) return null
+  const subject = "Let's Connect | Anubhav Verma"
+  const body = [
+    'Hi Anubhav,',
+    '',
+    'I came across your portfolio — Mr. Experience — and really enjoyed seeing the projects you are building.',
+    '',
+    "I'd love to connect, exchange ideas, and explore potential collaboration opportunities together.",
+    '',
+    'Looking forward to hearing from you.',
+    '',
+    'Best regards,',
+    '[Your Name]',
+  ].join('\n')
+  return `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+    body.replace(/\n/g, '\r\n')
+  )}`
+})()
+
+/* =========================================================================
    2 · SOCIAL PROFILES  (verified links — edit only if they change)
    ========================================================================= */
 export const socials = [
