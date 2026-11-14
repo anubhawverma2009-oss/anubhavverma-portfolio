@@ -116,6 +116,12 @@ export const socials = [
     handle: '@anubhver6483',
     url: 'https://unstop.com/u/anubhver6483',
   },
+  {
+  id: 'email',
+  label: 'Email',
+  handle: 'mr.experienceanubhav@gmail.com',
+  url: 'mailto:mr.experienceanubhav@gmail.com',
+  },
 ]
 
 /* =========================================================================
@@ -232,7 +238,7 @@ export const projects = [
     status: 'AI for agriculture',
     year: '2026',
     image: null,
-    art: { from: '#34d399', to: '#22d3ee', label: 'KX' },
+    art: { from: '#14b178', to: '#22d3ee', label: 'KX' },
     featured: false,
   },
   {
