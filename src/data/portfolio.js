@@ -382,13 +382,13 @@ export const skills = [
    ========================================================================= */
 export const achievements = [
   {
-    type: 'win',
-    title: 'CyberAware Promotion Competition — 1st Position',
-    org: 'RANKUP',
-    date: null, // e.g. '2025'
+    type: 'achievement',
+    title: 'U-19 AI Olympics — 7th Position',
+    org: 'TENSOR SCHOOL OF CS & AI',
+    date: 'JULY 2026',
     description:
-      'Awarded FIRST POSITION in the CyberAware promotion competition organized by RANKUP — a competition win.',
-    badge: 'Winner · 1st Position',
+      'Secured 7th position in the U-19 AI Olympics organized by TENSOR SCHOOL OF CS & AI.',
+     badge: '7th Position',
   },
   {
     type: 'participation',
