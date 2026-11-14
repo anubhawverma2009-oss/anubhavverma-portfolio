@@ -397,16 +397,16 @@ export const achievements = [
   org: 'Lucknow Public College of Professional Studies',
   date: 'AUGUST 2026',
   description:
-    'Secured 2nd position in the college-level round of Smart India Hackathon.',
-  teamName: 'Chakravyuh',
-  team: [
-    'Anubhav Verma',
-    'Aadarsh Yadav',
-    'Ananya Srivastava',
-    'Ankita Chaurasia',
-    'Aviral Omar',
-    'Devansh Singh',
-  ],
+  'Secured 2nd position in the college-level round of Smart India Hackathon as Team Chakravyuh.',
+teamName: 'Chakravyuh',
+team: [
+  'Anubhav Verma',
+  'Aadarsh Yadav',
+  'Ananya Srivastava',
+  'Ankita Chaurasia',
+  'Aviral Omar',
+  'Devansh Singh',
+],
   badge: '2nd Position · College Level',
 },
   {
