@@ -120,7 +120,7 @@ export const socials = [
   id: 'email',
   label: 'Email',
   handle: 'mr.experienceanubhav@gmail.com',
-  url: 'mailto:mr.experienceanubhav@gmail.com',
+  url: 'https://mail.google.com/mail/?view=cm&fs=1&to=mr.experienceanubhav@gmail.com',
   },
 ]
 
