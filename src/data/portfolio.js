@@ -34,9 +34,9 @@ export const site = {
 
   /* Hero heading + supporting copy */
   heading: "Hi, I'm Anubhav Verma.",
-  tagline: 'Exploring Technology. Building Ideas. Creating Experiences.',
+  tagline: 'Learning Technology · Building Projects · Solving Problems',
   intro:
-    "I'm a curious learner passionate about technology, creativity, problem-solving, and building meaningful digital experiences.",
+   "I'm a curious student exploring technology through hands-on projects, AI-assisted development, and creative problem-solving — turning ideas into meaningful digital experiences.",
 
   /* ── YOUR PHOTO ─────────────────────────────────────────────────────────
      Drop a picture at  public/images/profile.jpg  (square, ≥ 500×500 works
