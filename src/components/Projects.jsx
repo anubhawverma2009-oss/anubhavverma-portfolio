@@ -31,8 +31,12 @@ function ProjectCard({ project, index }) {
               aria-label={`${project.name} — generated artwork placeholder`}
             >
               <span className="art-gen__ring" aria-hidden="true" />
-              <span className="art-gen__label">{project.art?.label || project.name.slice(0, 2).toUpperCase()}</span>
-              {isDev && !project.image && (
+              {project.showcase ? (
+                <GithubIcon className="art-gen__logo" />
+              ) : (
+                <span className="art-gen__label">{project.art?.label || project.name.slice(0, 2).toUpperCase()}</span>
+              )}
+              {isDev && !project.image && !project.showcase && (
                 <span className="art-tag">placeholder · add image in portfolio.js</span>
               )}
             </div>
@@ -72,7 +76,7 @@ function ProjectCard({ project, index }) {
               rel="noopener noreferrer"
             >
               <GithubIcon />
-              Source
+              {project.cta || 'Source'}
             </a>
             {project.demo && (
               <a
@@ -85,9 +89,11 @@ function ProjectCard({ project, index }) {
                 Live Demo
               </a>
             )}
-            <span className="link-pill" style={{ cursor: 'default', opacity: 0.65 }}>
-              {project.year}
-            </span>
+            {project.year && (
+              <span className="link-pill" style={{ cursor: 'default', opacity: 0.65 }}>
+                {project.year}
+              </span>
+            )}
           </div>
         </div>
       </div>

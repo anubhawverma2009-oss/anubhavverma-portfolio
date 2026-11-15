@@ -180,48 +180,9 @@ export const about = {
      image: '/images/projects/nawabi-safar.png'.
    • demo: null  → no "Live Demo" button is rendered.
    • featured: true → the card spans the full row width.
+   • showcase: true → GitHub-logo art + CTA pill (used by the profile card).
    ========================================================================= */
 export const projects = [
-  {
-    id: 'nawabi-safar',
-    name: 'Nawabi Safar',
-    tagline: 'Discover Lucknow. Find Your Vibe. Experience the City.',
-    description:
-      'A digital tourism and heritage-discovery platform for Lucknow — cataloguing monuments, food spots, artisans and emergency helplines, with an admin CMS for content management.',
-    tech: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS v4', 'Leaflet Maps', 'Supabase', 'Motion'],
-    features: [
-      'Vibe-based exploration (Royal, Street Food, Spiritual, Artisans)',
-      '"Build My Day" itinerary planner + interactive maps',
-      'Admin dashboard with real-time multi-device sync',
-    ],
-    github: 'https://github.com/anubhawverma2009-oss/Navabi-Safar',
-    demo: null,
-    status: 'Flagship project',
-    year: '2026',
-    image: null,
-    art: { from: '#2255ff', to: '#8b5cf6', label: 'NS' },
-    featured: true,
-  },
-  {
-    id: 'civic-pulse',
-    name: 'Civic Pulse AI',
-    tagline: 'Community Hero — hyperlocal problem solver.',
-    description:
-      'A civic-engagement platform where citizens report local infrastructure problems with photos, an on-device intelligence layer triages them, and the community verifies issues through voting and peer evidence.',
-    tech: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS', 'Leaflet', 'Motion'],
-    features: [
-      'Photo-based issue reporting with auto triage & severity heatmaps',
-      'DrishtiBot — conversational assistant for civic info',
-      'Community voting + gamified Civic Coins rewards',
-    ],
-    github: 'https://github.com/anubhawverma2009-oss/CivicPulse',
-    demo: 'https://civicpulse.ai.studio',
-    status: 'Hackathon · Vibe2Ship 2026',
-    year: '2026',
-    image: null,
-    art: { from: '#00c6ff', to: '#4d8dff', label: 'CP' },
-    featured: false,
-  },
   {
     id: 'krishx',
     name: 'KrishiX',
@@ -258,36 +219,39 @@ export const projects = [
     featured: false,
   },
   {
-    id: 'studyflow',
-    name: 'StudyFlow',
-    tagline: 'AI-powered study workspace.',
+    id: 'nawabi-safar',
+    name: 'Nawabi Safar',
+    tagline: 'Discover Lucknow. Find Your Vibe. Experience the City.',
     description:
-      'An AI-powered study workspace combining PDF tools, AI tutoring and intelligent note-taking in one place.',
-    tech: ['TypeScript', 'React', 'Vite'],
-    features: ['PDF study tools', 'AI tutoring', 'Intelligent note-taking'],
-    github: 'https://github.com/anubhawverma2009-oss/StudyFlow',
+      'A digital tourism and heritage-discovery platform for Lucknow — cataloguing monuments, food spots, artisans and emergency helplines, with an admin CMS for content management.',
+    tech: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS v4', 'Leaflet Maps', 'Supabase', 'Motion'],
+    features: [
+      'Vibe-based exploration (Royal, Street Food, Spiritual, Artisans)',
+      '"Build My Day" itinerary planner + interactive maps',
+      'Admin dashboard with real-time multi-device sync',
+    ],
+    github: 'https://github.com/anubhawverma2009-oss/Navabi-Safar',
     demo: null,
-    status: 'Productivity · AI',
+    status: 'Flagship project',
     year: '2026',
     image: null,
-    art: { from: '#f59e0b', to: '#8b5cf6', label: 'SF' },
-    featured: false,
+    art: { from: '#2255ff', to: '#8b5cf6', label: 'NS' },
+    featured: true,
   },
   {
-    id: 'marriage-lawn',
-    name: 'Marrige-Lawn',
-    tagline: 'Luxury wedding-venue explorer.',
+    id: 'github-more',
+    name: 'More Projects on GitHub',
     description:
-      'A web experience for a luxury Indian wedding venue — interactive customiser, curated gallery and venue storytelling.',
-    tech: ['TypeScript', 'React', 'Vite'],
-    features: ['Interactive venue customiser', 'Curated gallery'],
-    github: 'https://github.com/anubhawverma2009-oss/Marrige-Lawn',
+      'These highlights are just the beginning — my GitHub profile hosts more public repositories, experiments and work-in-progress builds. Explore them to see everything I am learning and building.',
+    tech: [],
+    features: [],
+    github: socials[0].url,
+    cta: 'Explore My GitHub',
     demo: null,
-    status: 'Client-style web app',
-    year: '2026',
+    status: 'Public repositories',
     image: null,
-    art: { from: '#f472b6', to: '#fb923c', label: 'ML' },
-    featured: false,
+    showcase: true,
+    featured: true,
   },
 
   /* ── TEMPLATE — copy, uncomment and fill to add another project ─────────

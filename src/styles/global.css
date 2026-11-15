@@ -1015,6 +1015,13 @@ button {
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 8px 30px rgba(0, 0, 0, 0.45));
 }
+.art-gen__logo {
+  position: relative;
+  width: clamp(64px, 9vw, 110px);
+  height: auto;
+  color: #fff;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.45));
+}
 .art-gen__ring {
   position: absolute;
   width: 62%;
