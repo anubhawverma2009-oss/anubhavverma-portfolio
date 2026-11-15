@@ -496,13 +496,13 @@ export const certificates = {
   linkedin: {
     title: 'My Certifications on LinkedIn',
     subtitle: 'Explore my certificates, achievements and latest learning updates.',
-    label: 'Updated regularly',
+    label: 'Click to Explore All My Certificates & Latest Updates ↗',
     url: 'https://www.linkedin.com/in/anbhav-verma-b80142289/details/certifications/',
   },
   drive: {
     title: 'Download All Certificates',
     subtitle: 'Access the complete certificate collection.',
-    url: null, // e.g. a Google Drive folder link — card stays hidden until set
+    url: 'https://drive.google.com/drive/folders/1eZaCixmay7AKzs7Jgf-DFIIRP2IqZMiw?usp=drive_link',
   },
 }
 
