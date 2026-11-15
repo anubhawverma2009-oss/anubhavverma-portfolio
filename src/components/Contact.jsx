@@ -29,7 +29,7 @@ export default function Contact() {
                   {site.email}
                 </a>
               ) : (
-                <Slot>add your email in portfolio.js (site.email)</Slot>
+                <Slot>add your email in portfolio/home.js (site.email)</Slot>
               )}
             </div>
 

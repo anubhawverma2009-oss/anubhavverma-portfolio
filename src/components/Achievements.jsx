@@ -33,7 +33,7 @@ export default function Achievements() {
                       {a.date}
                     </span>
                   ) : (
-                    <Slot>add year in portfolio.js</Slot>
+                    <Slot>add year in portfolio/achievements.js</Slot>
                   )}
                 </div>
                 <h3>{a.title}</h3>

@@ -37,7 +37,7 @@ function ProjectCard({ project, index }) {
                 <span className="art-gen__label">{project.art?.label || project.name.slice(0, 2).toUpperCase()}</span>
               )}
               {isDev && !project.image && !project.showcase && (
-                <span className="art-tag">placeholder · add image in portfolio.js</span>
+                <span className="art-tag">placeholder · add image in portfolio/projects.js</span>
               )}
             </div>
           )}

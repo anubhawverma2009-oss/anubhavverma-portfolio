@@ -54,7 +54,7 @@ export default function Skills() {
           <p className="skill-note">
             <InfoIcon />
             {dev
-              ? 'A growing set of skills, shaped by hands-on projects, practical exploration, and continuous learning · dashed chips appear only in dev — edit src/data/portfolio.js to move a skill from “planned” to “confirmed”.'
+              ? 'A growing set of skills, shaped by hands-on projects, practical exploration, and continuous learning · dashed chips appear only in dev — edit src/data/portfolio/skills.js to move a skill from “planned” to “confirmed”.'
               : 'A growing set of skills, shaped by hands-on projects, practical exploration, and continuous learning.'}
           </p>
         </Reveal>

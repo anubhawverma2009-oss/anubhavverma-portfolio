@@ -27,12 +27,12 @@ Requires Node.js 18+ (built and tested on Node 24).
 
 ## ✏️ Editing your content — ONE file
 
-**Everything lives in [`src/data/portfolio.js`](src/data/portfolio.js).**
+**Each section lives in its own file under [`src/data/portfolio/`](src/data/portfolio/)** (`home.js`, `about.js`, `projects.js`, `skills.js`, `achievements.js`, `certificates.js`) — `index.js` re-exports them all.
 Name, intro, photo, social links, projects, skills, achievements, certificates,
 resume path and contact info. Commented templates inside the file show how to
 add more entries. No other file needs to change.
 
-| What you want to change | Where in `portfolio.js` |
+| What you want to change | Where in `src/data/portfolio/` |
 | --- | --- |
 | Name, tagline, intro, roles, location | `site` |
 | Profile photo | `site.profileImage` (drop the file in `public/images/`) |
@@ -60,7 +60,7 @@ image/link, achievement years, project screenshots
 │   ├── og-image.png            # social share card (1200×630)
 │   └── resume/                 # ← replace with your real resume PDF
 ├── src/
-│   ├── data/portfolio.js       # ★ ALL editable content
+│   ├── data/portfolio/        # ★ ALL editable content (one file per section)
 │   ├── styles/global.css       # design system (tokens → components)
 │   ├── hooks.js                # reveal, active-section, tilt, media queries
 │   ├── three/HeroScene.jsx     # WebGL scene (lazy-loaded chunk)
