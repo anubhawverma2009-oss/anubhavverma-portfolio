@@ -571,7 +571,10 @@ button {
 /* ─────────────────────────────── Hero ────────────────────────────────── */
 .hero {
   position: relative;
-  min-height: 100svh;
+  /* Reserve the marquee strip's height (~67px) so the full marquee sits in
+     the initial viewport on desktop/laptop; content stays centered and the
+     hero simply grows again when content is taller (small screens). */
+  min-height: calc(100svh - 67px);
   display: flex;
   flex-direction: column;
   justify-content: center;
