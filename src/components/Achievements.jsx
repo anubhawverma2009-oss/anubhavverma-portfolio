@@ -39,6 +39,9 @@ export default function Achievements() {
                 <h3>{a.title}</h3>
                 <p className="org">{a.org}</p>
                 <p>{a.description}</p>
+                {a.team?.length > 0 && (
+                <p>{a.team.join(', ')}</p>
+                )}
               </Reveal>
             )
           })}

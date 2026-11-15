@@ -439,7 +439,7 @@ team: [
   'Devansh Singh',
 ],
   badge: '2nd Position · College Level',
-},
+  },
   {
     type: 'learning',
     title: 'Continuous Learning & Skill Development',
@@ -465,6 +465,16 @@ team: [
     org: 'Organizer',
     date: null,
     description: 'What the win was for.',
+    teamName: 'Chakravyuh',
+   team: [
+  'Anubhav Verma',
+  'Aadarsh Yadav',
+  'Ananya Srivastava',
+  'Ankita Chaurasia',
+  'Aviral Omar',
+  'Devansh Singh',
+   ],
+
     badge: 'Winner',
   },
   ----------------------------------------------------------------------- */
