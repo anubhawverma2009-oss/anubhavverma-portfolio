@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { installRouter, linkTo } from './router'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Marquee from './components/Marquee'
@@ -12,6 +14,9 @@ import Cursor from './components/Cursor'
 import ScrollProgress from './components/ScrollProgress'
 
 export default function App() {
+  /* Path-based routing: back/forward + initial deep links (/about etc.) */
+  useEffect(() => installRouter(), [])
+
   return (
     <>
       {/* fixed ambience layers */}
@@ -20,7 +25,7 @@ export default function App() {
       <div className="page-noise" aria-hidden="true" />
 
       <a
-        href="#about"
+        {...linkTo('about')}
         className="link-pill"
         style={{
           position: 'absolute',

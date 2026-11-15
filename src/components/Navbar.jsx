@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import { nav, site } from '../data/portfolio'
+import { nav } from '../data/portfolio'
 import { useActiveSection, useMediaQuery } from '../hooks'
+import { linkTo } from '../router'
 import { MenuIcon, CloseIcon, MailIcon } from './icons'
 
 const NAV_IDS = nav.map((n) => n.id)
@@ -41,7 +42,7 @@ export default function Navbar() {
     <>
       <header className={`navbar ${scrolled ? 'is-scrolled' : ''}`}>
         <div className="navbar__inner">
-          <a href="#home" className="brand" aria-label="Anubhav Verma — home">
+          <a {...linkTo('home')} className="brand" aria-label="Anubhav Verma — home">
             <span className="brand__mark" aria-hidden="true">AV</span>
             <span className="brand__name">
               Anubhav<span> · Verma</span>
@@ -54,7 +55,7 @@ export default function Navbar() {
                 {nav.map((item) => (
                   <li key={item.id}>
                     <a
-                      href={`#${item.id}`}
+                      {...linkTo(item.id)}
                       className={active === item.id ? 'active' : ''}
                       aria-current={active === item.id ? 'true' : undefined}
                     >
@@ -69,7 +70,7 @@ export default function Navbar() {
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
             {isDesktop && (
-              <a href="#contact" className="btn btn--ghost nav-cta" style={{ padding: '10px 20px' }}>
+              <a {...linkTo('contact')} className="btn btn--ghost nav-cta" style={{ padding: '10px 20px' }}>
                 <MailIcon />
                 Let's Connect
               </a>
@@ -100,8 +101,11 @@ export default function Navbar() {
           {nav.map((item, i) => (
             <a
               key={item.id}
-              href={`#${item.id}`}
-              onClick={go}
+              {...linkTo(item.id)}
+              onClick={(e) => {
+                go()
+                linkTo(item.id).onClick(e)
+              }}
               className={active === item.id ? 'active' : ''}
               style={{ transitionDelay: open ? `${90 + i * 55}ms` : '0ms' }}
             >
@@ -111,7 +115,7 @@ export default function Navbar() {
           ))}
         </nav>
         <div className="mobile-menu__foot">
-          <a href="#contact" className="btn btn--primary" onClick={go}>
+          <a {...linkTo('contact')} className="btn btn--primary" onClick={(e) => { go(); linkTo('contact').onClick(e) }}>
             <MailIcon />
             Let's Connect
           </a>

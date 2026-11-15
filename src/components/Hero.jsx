@@ -1,5 +1,6 @@
 import { lazy, Suspense, useRef, useState, useEffect } from 'react'
 import { site, socials } from '../data/portfolio'
+import { linkTo } from '../router'
 import { useInView, useLowPower, useReducedMotion, useMediaQuery } from '../hooks'
 import ErrorBoundary from './ErrorBoundary'
 import { socialIcon, ArrowRightIcon, MapPinIcon, SparkIcon } from './icons'
@@ -71,11 +72,11 @@ export default function Hero() {
         </p>
 
         <div className="hero__actions hero-enter" style={{ '--d': '460ms' }}>
-          <a href="#projects" className="btn btn--primary">
+          <a {...linkTo('projects')} className="btn btn--primary">
             Explore My Work
             <ArrowRightIcon />
           </a>
-          <a href="#contact" className="btn btn--ghost">
+          <a {...linkTo('contact')} className="btn btn--ghost">
             Let's Connect
           </a>
         </div>

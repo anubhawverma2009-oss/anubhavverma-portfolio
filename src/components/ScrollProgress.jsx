@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { navigateToSection } from '../router'
 import { ArrowUpIcon } from './icons'
 
 /** Top gradient scroll-progress bar + floating back-to-top button. */
@@ -32,7 +33,7 @@ export default function ScrollProgress() {
 
       <button
         className={`to-top ${showTop ? 'show' : ''}`}
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        onClick={() => navigateToSection('home')}
         aria-label="Back to top"
         tabIndex={showTop ? 0 : -1}
       >

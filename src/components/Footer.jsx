@@ -1,4 +1,5 @@
 import { site, socials, nav } from '../data/portfolio'
+import { linkTo, navigateToSection } from '../router'
 import { socialIcon, HeartIcon, ArrowUpIcon } from './icons'
 
 export default function Footer() {
@@ -8,7 +9,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="footer__grid">
-          <a href="#home" className="brand" aria-label="Back to top">
+          <a {...linkTo('home')} className="brand" aria-label="Back to top">
             <span className="brand__mark" aria-hidden="true">AV</span>
             <span className="brand__name">
               Anubhav<span> · Verma</span>
@@ -43,14 +44,14 @@ export default function Footer() {
           <span>© {year} Anubhav Verma · {site.domain}</span>
           <span style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
             {nav.slice(1, 5).map((n) => (
-              <a key={n.id} href={`#${n.id}`} style={{ color: 'inherit' }}>
+              <a key={n.id} {...linkTo(n.id)} style={{ color: 'inherit' }}>
                 {n.label}
               </a>
             ))}
           </span>
           <button
             className="link-pill"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={() => navigateToSection('home')}
             aria-label="Back to top"
           >
             <ArrowUpIcon />
