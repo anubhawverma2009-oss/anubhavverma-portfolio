@@ -166,7 +166,7 @@ export const about = {
   /* Quick facts row — all entries below are real/neutral. Add yours freely. */
   quickFacts: [
     { label: 'Based in', value: 'Lucknow, India' },
-    { label: 'Focus', value: 'Web · AI-powered apps' },
+    { label: 'Focus', value: 'AI-assisted Development · Web · Practical Projects' },
     { label: 'Status', value: 'Learning & building' },
     { label: 'Open to', value: 'Collaborations' },
   ],
