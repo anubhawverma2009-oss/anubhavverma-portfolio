@@ -500,7 +500,7 @@ export const certificates = {
     url: 'https://www.linkedin.com/in/anbhav-verma-b80142289/details/certifications/',
   },
   drive: {
-    title: 'Download All Certificates',
+    title: 'View All My Certificates on Google Drive ↗',
     subtitle: 'Access the complete certificate collection.',
     url: 'https://drive.google.com/drive/folders/1eZaCixmay7AKzs7Jgf-DFIIRP2IqZMiw?usp=drive_link',
   },
