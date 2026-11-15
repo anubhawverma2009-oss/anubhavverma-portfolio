@@ -433,7 +433,7 @@ teamName: 'Chakravyuh',
 team: [
   'Anubhav Verma',
   'Aadarsh Yadav',
-  'Ananya Srivastava',
+  'Aanya Srivastava',
   'Ankita Chaurasia',
   'Aviral Omar',
   'Devansh Singh',
