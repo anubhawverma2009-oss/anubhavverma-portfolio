@@ -129,7 +129,7 @@ export const socials = [
    ========================================================================= */
 export const about = {
   paragraphs: [
-    "I'm a student and technology enthusiast from Lucknow, India, driven by an appetite for learning and a love for turning ideas into working products. Right now I'm exploring modern web development and AI-powered applications by actually building things — tourism platforms, civic-tech tools, agriculture networks and personal AI assistants.",
+    "I'm a student and technology enthusiast from Lucknow, India, driven by curiosity and a love for turning ideas into working products. Right now I'm exploring modern web development and AI-powered applications by actually building things — tourism platforms, civic-tech tools, agriculture networks and personal AI assistants.",
     'For me, every project is a classroom: I pick a real problem, learn what the problem demands, ship a prototype, and iterate. Hackathons and challenges are where I sharpen this — tight deadlines force creative problem-solving and clean priorities.',
     "Beyond code, I enjoy the creative side of technology — designing experiences that feel good to use. I'm actively looking for opportunities to collaborate, contribute and keep growing.",
   ],
@@ -144,12 +144,12 @@ export const about = {
     {
       icon: 'code',
       title: 'Technology & Development',
-      text: 'Hands-on with modern web development — React, TypeScript and the tooling around them.',
+      text: 'Exploring modern web development through practical projects using React, TypeScript and related tools.',
     },
     {
       icon: 'lightbulb',
       title: 'Creative Problem-Solving',
-      text: 'Approaching problems from first principles and crafting practical, human-friendly solutions.',
+      text: 'Breaking down problems, exploring possible solutions and building practical, user-friendly experiences.',
     },
     {
       icon: 'users',
@@ -166,7 +166,7 @@ export const about = {
   /* Quick facts row — all entries below are real/neutral. Add yours freely. */
   quickFacts: [
     { label: 'Based in', value: 'Lucknow, India' },
-    { label: 'Focus', value: 'AI-assisted Development · Web · Practical Projects' },
+    { label: 'Focus', value: 'AI-assisted Development · Web Development · Practical Projects' },
     { label: 'Status', value: 'Learning & building' },
     { label: 'Open to', value: 'Collaborations' },
   ],

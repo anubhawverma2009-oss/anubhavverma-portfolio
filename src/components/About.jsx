@@ -49,8 +49,8 @@ export default function About() {
                 </div>
               </div>
               <p>
-                Student developer exploring technology and turning ideas into real, working
-                products — from heritage-tourism platforms to civic-tech and AI tools.
+                Student exploring technology through personal projects and hackathons, using AI-assisted development
+                 to turn ideas into practical digital solutions in tourism, civic-tech and AI.
               </p>
               <div className="acts">
                 <a href={site.resume.url} className="link-pill" download>
