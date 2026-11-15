@@ -502,6 +502,7 @@ export const certificates = {
   drive: {
     title: 'View All My Certificates on Google Drive ↗',
     subtitle: 'Access the complete certificate collection.',
+    label: 'Click to View All My Certificates on Google Drive',
     url: 'https://drive.google.com/drive/folders/1eZaCixmay7AKzs7Jgf-DFIIRP2IqZMiw?usp=drive_link',
   },
 }
