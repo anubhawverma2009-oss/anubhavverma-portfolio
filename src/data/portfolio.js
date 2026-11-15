@@ -483,44 +483,28 @@ team: [
 /* =========================================================================
    7 · CERTIFICATES
    -------------------------------------------------------------------------
-   image: put a scan/photo in  public/images/certificates/  then set
-          image: '/images/certificates/xxx.jpg'   (null → elegant placeholder)
-   url:   link that the "View Certificate" button opens (null → in dev a
-          dashed slot reminds you; in production the button stays hidden
-          until you add the link or image).
+   featured: each entry renders its own clickable card. Add entries here —
+   no JSX changes needed. Template:
+     { title: 'Certificate title', issuer: 'Organization', date: '2025',
+       url: 'https://…' }        (date is optional; omit the key entirely)
+   drive.url: keep null to hide the Drive card; a valid URL shows it.
    ========================================================================= */
-export const certificates = [
-  {
-    title: 'CyberAware — Cyber Security Awareness Challenge',
-    issuer: 'RANKUP',
-    type: 'Certificate of Participation',
-    date: null, // e.g. 'November 2025'
-    credentialId: null, // e.g. 'RANKUP-XXXX-XXXX'
-    image: null, // e.g. '/images/certificates/cyberaware.jpg'
-    url: null, // e.g. 'https://…' credential page or the image itself
+export const certificates = {
+  description:
+    'Every certificate represents a step forward — from exploring new technologies to participating in competitions, workshops and learning experiences.',
+  featured: [],
+  linkedin: {
+    title: 'My Certifications on LinkedIn',
+    subtitle: 'Explore my certificates, achievements and latest learning updates.',
+    label: 'Updated regularly',
+    url: 'https://www.linkedin.com/in/anbhav-verma-b80142289/details/certifications/',
   },
-
-  /* ── TEMPLATES ───────────────────────────────────────────────────────────
-  {
-    title: 'CyberAware Promotion Competition — Winner Certificate',  // if you have it
-    issuer: 'RANKUP',
-    type: '1st Position · Winner',
-    date: null,
-    credentialId: null,
-    image: null,
-    url: null,
+  drive: {
+    title: 'Download All Certificates',
+    subtitle: 'Access the complete certificate collection.',
+    url: null, // e.g. a Google Drive folder link — card stays hidden until set
   },
-  {
-    title: 'Another certificate title',
-    issuer: 'Issuing organization',
-    type: 'e.g. Workshop / Course / Participation',
-    date: null,
-    credentialId: null,
-    image: null,
-    url: null,
-  },
-  ----------------------------------------------------------------------- */
-]
+}
 
 /* =========================================================================
    8 · NAVIGATION  (section ids — keep in sync with section components)

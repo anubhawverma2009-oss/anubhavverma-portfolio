@@ -1,99 +1,101 @@
 import { certificates } from '../data/portfolio'
-import { DocIcon, EyeIcon, CalendarIcon, FingerIcon } from './icons'
-import { Reveal, SectionHead, Slot } from './ui'
-
-function CertCard({ cert, index }) {
-  const hasPreview = Boolean(cert.image || cert.url)
-  const isDev = import.meta.env.DEV
-
-  return (
-    <Reveal as="article" delay={(index % 2) * 90} className="card cert-card">
-      {/* preview */}
-      <div className="cert-card__preview">
-        {cert.image ? (
-          <img src={cert.image} alt={`${cert.title} certificate`} loading="lazy" />
-        ) : (
-          <div className="cert-ph" role="img" aria-label={`${cert.title} — certificate image placeholder`}>
-            <div className="cert-ph__inner">
-              <DocIcon />
-              <span>{isDev ? 'certificate image · add in portfolio.js' : 'certificate preview'}</span>
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* body */}
-      <div className="cert-card__body">
-        <span className="type">{cert.type}</span>
-        <h3>{cert.title}</h3>
-        <dl className="cert-card__meta">
-          <div>
-            <dt>Issued by</dt>
-            <dd>{cert.issuer}</dd>
-          </div>
-          {cert.date && (
-            <div>
-              <dt>
-                <CalendarIcon style={{ width: 11, height: 11, verticalAlign: '-1px' }} /> Date
-              </dt>
-              <dd>{cert.date}</dd>
-            </div>
-          )}
-          {cert.credentialId && (
-            <div>
-              <dt>
-                <FingerIcon style={{ width: 11, height: 11, verticalAlign: '-1px' }} /> Credential
-              </dt>
-              <dd style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem' }}>{cert.credentialId}</dd>
-            </div>
-          )}
-        </dl>
-
-        <div className="cert-card__actions">
-          {hasPreview ? (
-            <a
-              className="link-pill"
-              href={cert.url || cert.image}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <EyeIcon />
-              View Certificate
-            </a>
-          ) : (
-            <Slot>set image or url to enable “View Certificate”</Slot>
-          )}
-        </div>
-      </div>
-    </Reveal>
-  )
-}
+import { LinkedinIcon, ArrowUpRightIcon, DownloadIcon, AwardIcon } from './icons'
+import { Reveal, SectionHead } from './ui'
 
 export default function Certificates() {
+  const { featured, linkedin, drive } = certificates
+
   return (
-    <section id="certificates" className="section" aria-labelledby="certificates-title">
+    <section id="certificates" className="section section--alt" aria-labelledby="certificates-title">
       <div className="container">
         <SectionHead
           index={5}
           kicker="Certificates"
-          title={<>Proof of <span className="grad-text">learning</span></>}
-          lead="Genuine certificates only — placeholders stay clearly marked until real files are added."
+          title={<>Proof of <span className="grad-text">Learning</span></>}
+          lead={certificates.description}
         />
 
-        <div className="certs-grid">
-          {certificates.map((c, i) => (
-            <CertCard key={c.title} cert={c} index={i} />
-          ))}
-        </div>
+        {/* Featured certificates — renders only when entries exist */}
+        {featured.length > 0 && (
+          <div className="certs-featured">
+            {featured.map((cert, i) => (
+              <Reveal key={cert.title} delay={(i % 3) * 80}>
+                <a
+                  className="card cert-card"
+                  href={cert.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${cert.title} — opens in a new tab`}
+                >
+                  <span className="cert-card__icon" aria-hidden="true">
+                    <AwardIcon />
+                  </span>
+                  <span className="cert-card__text">
+                    <span className="cert-card__title">{cert.title}</span>
+                    <span className="cert-card__meta">
+                      {cert.issuer}
+                      {cert.date ? ` · ${cert.date}` : ''}
+                    </span>
+                  </span>
+                  <span className="cert-link__arrow" aria-hidden="true">
+                    <ArrowUpRightIcon />
+                  </span>
+                </a>
+              </Reveal>
+            ))}
+          </div>
+        )}
 
-        <Reveal>
-          <p className="skill-note">
-            <DocIcon />
-            {import.meta.env.DEV
-              ? 'Adding a new certificate = adding one block to the certificates array in src/data/portfolio.js — no redesign needed.'
-              : 'More certificates — added as they are earned.'}
-          </p>
-        </Reveal>
+        {/* Link cards — Drive card only renders when drive.url is set */}
+        <div className="certs-summary">
+          <Reveal>
+            <a
+              className="card cert-link"
+              href={linkedin.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${linkedin.title} — opens in a new tab`}
+            >
+              <span className="cert-link__icon" aria-hidden="true">
+                <LinkedinIcon />
+              </span>
+              <span className="cert-link__text">
+                <span className="cert-link__title">{linkedin.title}</span>
+                <span className="cert-link__subtitle">{linkedin.subtitle}</span>
+                <span className="cert-link__updated">
+                  <span className="pulse" aria-hidden="true" />
+                  {linkedin.label}
+                </span>
+              </span>
+              <span className="cert-link__arrow" aria-hidden="true">
+                <ArrowUpRightIcon />
+              </span>
+            </a>
+          </Reveal>
+
+          {drive.url && (
+            <Reveal delay={120}>
+              <a
+                className="card cert-link"
+                href={drive.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${drive.title} — opens in a new tab`}
+              >
+                <span className="cert-link__icon" aria-hidden="true">
+                  <DownloadIcon />
+                </span>
+                <span className="cert-link__text">
+                  <span className="cert-link__title">{drive.title}</span>
+                  <span className="cert-link__subtitle">{drive.subtitle}</span>
+                </span>
+                <span className="cert-link__arrow" aria-hidden="true">
+                  <ArrowUpRightIcon />
+                </span>
+              </a>
+            </Reveal>
+          )}
+        </div>
       </div>
     </section>
   )
