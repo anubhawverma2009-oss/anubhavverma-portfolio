@@ -17,7 +17,7 @@ export default function Footer() {
           </a>
 
           <p className="footer__meta">
-            Designed &amp; Built with <HeartIcon className="heart" /> curiosity by Anubhav Verma.
+            Designed &amp; Built with <HeartIcon className="heart" /> curiosity, creativity &amp; passion by Anubhav Verma.
           </p>
 
           <nav className="footer__socials" aria-label="Social links">
