@@ -30,7 +30,7 @@ export const site = {
   /* Creator identity shown as a small tag in the hero */
   alias: 'Mr. Experience',
 
-  roles: ['Student', 'Technology Enthusiast', 'Aspiring Developer', 'Creative Learner'],
+  roles: ['Student', 'Technology Enthusiast', 'Entrepreneurship Enthusiast', 'Creative Learner',],
 
   /* Hero heading + supporting copy */
   heading: "Hi, I'm Anubhav Verma.",
