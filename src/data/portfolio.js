@@ -236,7 +236,7 @@ export const projects = [
     year: '2026',
     image: null,
     art: { from: '#2255ff', to: '#8b5cf6', label: 'NS' },
-    featured: true,
+    featured: false,
   },
   {
     id: 'github-more',
@@ -247,11 +247,11 @@ export const projects = [
     features: [],
     github: socials[0].url,
     cta: 'Explore My GitHub',
-    demo: null,
+    demo: 'https://github.com/anubhawverma2009-oss?tab=repositories',
     status: 'Public repositories',
     image: null,
     showcase: true,
-    featured: true,
+    featured: false,
   },
 
   /* ── TEMPLATE — copy, uncomment and fill to add another project ─────────
