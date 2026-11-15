@@ -494,9 +494,9 @@ export const certificates = {
     'Every certificate represents a step forward — from exploring new technologies to participating in competitions, workshops and learning experiences.',
   featured: [],
   linkedin: {
-    title: 'My Certifications on LinkedIn',
+    title: 'My Certifications on LinkedIn↗',
     subtitle: 'Explore my certificates, achievements and latest learning updates.',
-    label: 'Click to Explore All My Certificates & Latest Updates ↗',
+    label: 'Click to Explore All My Certificates & Latest Updates on LinkedIn',
     url: 'https://www.linkedin.com/in/anbhav-verma-b80142289/details/certifications/',
   },
   drive: {
