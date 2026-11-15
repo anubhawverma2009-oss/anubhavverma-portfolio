@@ -40,7 +40,12 @@ export default function Achievements() {
                 <p className="org">{a.org}</p>
                 <p>{a.description}</p>
                 {a.team?.length > 0 && (
-                <p>{a.team.join(', ')}</p>
+                  <p>
+                    <strong>
+                      {a.teamName ? `Team ${a.teamName} — ` : 'Team Members: '}
+                    </strong>
+                    {a.team.join(', ')}
+                  </p>
                 )}
               </Reveal>
             )
