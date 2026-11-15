@@ -88,6 +88,10 @@ export default function Certificates() {
                 <span className="cert-link__text">
                   <span className="cert-link__title">{drive.title}</span>
                   <span className="cert-link__subtitle">{drive.subtitle}</span>
+                  <span className="cert-link__updated">
+                    <span className="pulse" aria-hidden="true" />
+                    {drive.label}
+                  </span>
                 </span>
                 <span className="cert-link__arrow" aria-hidden="true">
                   <ArrowUpRightIcon />
