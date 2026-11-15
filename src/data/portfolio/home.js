@@ -23,7 +23,7 @@ export const site = {
 
   /* Hero heading + supporting copy */
   heading: "Hi, I'm Anubhav Verma.",
-  tagline: 'Learning Technology · Building Projects · Solving Problems',
+  tagline: 'Exploring Technology · Building Ideas · Creating Experiences',
   intro:
    "I'm a curious student exploring technology through hands-on projects, AI-assisted development, and creative problem-solving — turning ideas into meaningful digital experiences.",
 

@@ -1,4 +1,5 @@
 import { lazy, Suspense, useRef, useState, useEffect } from 'react'
+import { Fragment } from 'react'
 import { site, socials } from '../data/portfolio'
 import { linkTo } from '../router'
 import { useInView, useLowPower, useReducedMotion, useMediaQuery } from '../hooks'
@@ -61,10 +62,22 @@ export default function Hero() {
           Hi, I'm <span className="grad-text">Anubhav Verma</span>.
         </h1>
 
+        {/* Tagline renders from site.tagline (portfolio/home.js): segments are
+            separated by dot seps; with three segments the middle one keeps the
+            signature gradient. */}
         <p className="hero__tagline hero-enter" style={{ '--d': '260ms' }}>
-          Exploring Technology<span className="sep">·</span>
-          <span className="grad-text">Building Ideas</span>
-          <span className="sep">·</span>Creating Experiences
+          {site.tagline
+            .split('·')
+            .map((segment, i, parts) => (
+              <Fragment key={i}>
+                {i > 0 && <span className="sep">·</span>}
+                {parts.length === 3 && i === 1 ? (
+                  <span className="grad-text">{segment.trim()}</span>
+                ) : (
+                  segment.trim()
+                )}
+              </Fragment>
+            ))}
         </p>
 
         <p className="hero__intro hero-enter" style={{ '--d': '360ms' }}>
