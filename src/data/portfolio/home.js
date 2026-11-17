@@ -111,6 +111,12 @@ export const socials = [
   handle: 'mr.experienceanubhav@gmail.com',
   url: 'https://mail.google.com/mail/?view=cm&fs=1&to=mr.experienceanubhav@gmail.com',
   },
+ {
+  id: 'HackerRank',
+  label: 'HackerRank',
+  handle: '@anubhawverma2009',
+  url: 'https://www.hackerrank.com/anubhawverma2009',
+  },
 ]
 
 /* =========================================================================
