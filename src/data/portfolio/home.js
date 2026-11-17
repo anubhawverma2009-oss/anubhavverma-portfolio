@@ -106,12 +106,6 @@ export const socials = [
     url: 'https://unstop.com/u/anubhver6483',
   },
   {
-  id: 'HackerRank',
-  label: 'HackerRank',
-  handle: '@anubhawverma2009',
-  url: 'https://www.hackerrank.com/anubhawverma2009',
-  },
-  {
   id: 'email',
   label: 'Email',
   handle: 'mr.experienceanubhav@gmail.com',

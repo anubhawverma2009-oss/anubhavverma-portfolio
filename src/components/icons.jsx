@@ -39,43 +39,13 @@ export const InstagramIcon = (p) => (
 )
 
 export const UnstopIcon = (p) => (
-  <svg
-    viewBox="0 0 24 24"
-    width={24}
-    height={24}
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={1.8}
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-    {...p}
-  >
-    {/* Unstop "un" monogram style */}
-    <path d="M4 8v4.5a3.5 3.5 0 0 0 7 0V8" />
-    <path d="M14 16v-4.5a3.5 3.5 0 0 1 7 0V16" />
-  </svg>
+  <I {...p}>
+    <rect x="3" y="3" width="18" height="18" rx="5" />
+    <path d="M8 7v5.2a4 4 0 0 0 8 0V7" />
+    <path d="M9.5 17l1.4-2.4" />
+  </I>
 )
 
-export const HackerRankIcon = (p) => (
-  <svg
-    viewBox="0 0 24 24"
-    width={24}
-    height={24}
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={1.8}
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-    {...p}
-  >
-    <path d="M12 2L3.5 7v10L12 22l8.5-5V7L12 2z" />
-    <path d="M9.5 8v8" />
-    <path d="M14.5 8v8" />
-    <path d="M9.5 12h5" />
-  </svg>
-)
 export const socialIcon = (id) =>
   ({
     github: GithubIcon,
@@ -83,7 +53,6 @@ export const socialIcon = (id) =>
     instagram: InstagramIcon,
     unstop: UnstopIcon,
     email: MailIcon,
-    hackerrank: HackerRankIcon,
   }[id] || LinkIcon)
 
 /* General UI */
