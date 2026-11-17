@@ -47,8 +47,7 @@ export const UnstopIcon = (p) => (
     <path d="M7.5 9.5l1.5-1.5" />
     <path d="M15 9.5l-1.5-1.5" />
     <path d="M12 17v-4" />
-  </I>  
-  
+  </I>
 )
 export const HackerRankIcon = (p) => (
   <I {...p}>
