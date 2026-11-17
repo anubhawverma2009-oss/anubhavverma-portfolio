@@ -40,16 +40,12 @@ export const InstagramIcon = (p) => (
 
 export const UnstopIcon = (p) => (
   <I {...p}>
-    <path d="M12 2L2 7v10l10 5 10-5V7L12 2z" />
-    <path d="M12 22V12" />
-    <path d="M2 7l10 5 10-5" />
-    <path d="M2 17l10-5 10 5" />
-    <path d="M7.5 9.5l1.5-1.5" />
-    <path d="M15 9.5l-1.5-1.5" />
-    <path d="M12 17v-4" />
-  </I>  
-  
+    <rect x="3" y="3" width="18" height="18" rx="5" />
+    <path d="M8 7v5.2a4 4 0 0 0 8 0V7" />
+    <path d="M9.5 17l1.4-2.4" />
+  </I>
 )
+
 export const HackerRankIcon = (p) => (
   <I {...p}>
     <path d="M12 2L2 7v10l10 5 10-5V7L12 2z" />
