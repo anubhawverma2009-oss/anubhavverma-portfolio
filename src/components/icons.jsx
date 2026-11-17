@@ -53,6 +53,7 @@ export const socialIcon = (id) =>
     instagram: InstagramIcon,
     unstop: UnstopIcon,
     email: MailIcon,
+    hackerrank: HackerRankIcon,
   }[id] || LinkIcon)
 
 /* General UI */
